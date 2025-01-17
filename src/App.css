@@ -1,0 +1,223 @@
+:root {
+  --bg-primary-h: 224;
+  --bg-primary-s: 10%;
+  --bg-primary-l: 20%;
+
+  --border-radius: 0.4rem;
+
+  --bg-primary: hsl(
+    var(--bg-primary-h),
+    var(--bg-primary-s),
+    var(--bg-primary-l)
+  );
+  --color-init: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) + 5%),
+    calc(var(--bg-primary-l) + 40%)
+  );
+  --color-hover: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) + 40%),
+    calc(var(--bg-primary-l) + 80%)
+  );
+  --color-active: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) + 5%),
+    calc(var(--bg-primary-l) + 10%)
+  );
+}
+
+.TodoApp_Body {
+  min-height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    hsl(var(--bg-primary-h), var(--bg-primary-s), var(--bg-primary-l)),
+    hsl(
+      var(--bg-primary-h),
+      calc(var(--bg-primary-s) + 20%),
+      calc(var(--bg-primary-l) + 4%)
+    ),
+    hsl(
+      var(--bg-primary-h),
+      calc(var(--bg-primary-s) - 4%),
+      calc(var(--bg-primary-l) - 2%)
+    )
+  );
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  /* background-color: var(--bg-primary); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.TodoApp_Body button {
+  padding: 0.6em 0.8em;
+  color: white;
+  border: 1px solid
+    hsl(
+      var(--bg-primary-h),
+      calc(var(--bg-primary-s) - 20%),
+      calc(var(--bg-primary-l) + 10%)
+    );
+  border-radius: var(--border-radius);
+  background-color: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) - 5%),
+    calc(var(--bg-primary-l) + 5%)
+  );
+  cursor: pointer;
+  transition: 100ms ease-out background;
+}
+.TodoApp_Body button:hover {
+  background-color: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) - 20%),
+    calc(var(--bg-primary-l) + 10%)
+  );
+}
+.TodoApp_Body button:active {
+  background-color: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) - 20%),
+    calc(var(--bg-primary-l) - 30%)
+  );
+}
+
+.TodoApp_Header {
+  padding: 2rem 1em;
+  text-align: center;
+}
+
+.TaskList_AddPanel {
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 0.4rem;
+  border-radius: var(--border-radius);
+  background-color: hsl(
+    var(--bg-primary-h),
+    calc(var(--bg-primary-s) + 5%),
+    calc(var(--bg-primary-l) - 5%)
+  );
+}
+
+input {
+  padding: 0.4em 0.5em;
+  border-radius: var(--border-radius);
+  margin: 0.6em;
+  color: white;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--color-active);
+}
+
+.TaskList_Row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 0.6rem;
+  min-width: 420px;
+
+  background-color: hsl(
+    var(--bg-primary-h),
+    var(--bg-primary-s),
+    calc(var(--bg-primary-l) - 5%)
+  );
+  border-radius: var(--border-radius);
+
+  transition: 300ms ease-out background;
+}
+
+.TaskList_Row:has(.editInput) {
+  margin-bottom: 64px;
+}
+
+.TaskList_Row .editInput {
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  border-radius: 0 0 0.2rem 0.2rem;
+
+  background-color: hsl(
+    var(--bg-primary-h),
+    var(--bg-primary-s),
+    calc(var(--bg-primary-l) - 8%)
+  );
+}
+.TaskList_Row.completed .editInput {
+  background-color: hsl(
+    120,
+    var(--bg-primary-s),
+    calc(var(--bg-primary-l) + 5%)
+  );
+}
+
+.TaskList_Row .editInput div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem 1.2rem;
+}
+
+.TaskList_Row.completed {
+  background-color: hsl(
+    120,
+    var(--bg-primary-s),
+    calc(var(--bg-primary-l) + 10%)
+  );
+}
+
+.TaskList_Row .TaskList_EditPanel {
+  padding: 0.2rem;
+  margin-left: 0.4rem;
+}
+
+.TaskList_Row .TaskList_EditPanel svg,
+.TaskList_Row .TaskList_EditPanel .editInput svg {
+  padding: 0.4rem;
+  margin-left: 0.2rem;
+  color: var(--color-init);
+  border: 1px solid var(--color-init);
+  border-radius: var(--border-radius);
+  transition: 100ms ease-out color;
+  cursor: pointer;
+}
+.TaskList_Row .TaskList_EditPanel svg:hover,
+.TaskList_Row .TaskList_EditPanel svg:focus-visible,
+.TaskList_Row .TaskList_EditPanel .editInput svg:hover,
+.TaskList_Row .TaskList_EditPanel .editInput svg:focus-visible {
+  color: var(--color-hover);
+  border-color: var(--color-hover);
+}
+.TaskList_Row .TaskList_EditPanel svg:active,
+.TaskList_Row .TaskList_EditPanel .editInput svg:active {
+  color: var(--color-active);
+  border-color: var(--color-active);
+}
+
+.font-xl {
+  font-size: calc(10px + 2vmin);
+}
+.font-md {
+  font-size: calc(6px + 1vmin);
+}
+
+.italic {
+  font-style: italic;
+}
