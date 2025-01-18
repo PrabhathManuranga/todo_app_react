@@ -78,6 +78,12 @@ function TaskEditPanel({
                 placeholder="Task title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    editTaskTitle(title);
+                    setOpenEdit(!openEdit);
+                  }
+                }}
               />
             </label>
             <CheckIcon
