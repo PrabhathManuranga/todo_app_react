@@ -1,8 +1,8 @@
-<h1 style="text-align:center;">
+<h1 align="center">
 Todo App
 </h1>
 
-<p style="text-align:center;">
+<p align="center">
    <img src="readmeAssets/TodoApp_softwareBox.png" alt="Todo App software box picture" title="Todo App by Piotr Otta" height="320" />
 </p>
 
@@ -24,7 +24,7 @@ Todo App
 
 A very small Todo app built entirely with **React 19.0.0** and powered by **Zustand** state manager v5.0.3. App created for learning purposes.
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_photo.png" alt="Todo App showcase" title="Todo App showcase" width="400" />
 </p>
 
@@ -32,31 +32,31 @@ A very small Todo app built entirely with **React 19.0.0** and powered by **Zust
 
 - **Create tasks**: Add tasks with a title and completed state.
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_add.gif" alt="Todo App feature showcase - add task" title="Todo App feature showcase - add task" width="400" />
 </p>
 
 - **Delete tasks**: Remove tasks from the list.
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_delete.gif" alt="Todo App feature showcase - delete task" title="Todo App feature showcase - delete task" width="400" />
 </p>
 
 - **Edit tasks**: Modify the title of existing tasks.
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_edit.gif" alt="Todo App feature showcase - edit task" title="Todo App feature showcase - edit task" width="400" />
 </p>
 
 - **Toggle completion of the tasks**: Mark tasks as completed or revert them to incomplete.
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_toggle.gif" alt="Todo App feature showcase - toggle task completion" title="Todo App feature showcase - toggle task completion" width="400" />
 </p>
 
 - **Keyboard friendly**: Navigate the entire app using only the keyboard (tabs, space/enter to interact with buttons and inputs).
 
-<p>
+<p align="center">
 <img src="readmeAssets/readme_keyboard.gif" alt="Todo App feature showcase - keyboard accessibility" title="Todo App feature showcase - keyboard accessibility" width="400" />
 </p>
 
