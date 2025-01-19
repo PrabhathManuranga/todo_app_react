@@ -2,7 +2,7 @@
   "name": "todo_react_js",
   "version": "0.1.0",
   "author": "Piotr Otta",
-  "homepage": "https://piotrotta.github.io/todo-app-react",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
