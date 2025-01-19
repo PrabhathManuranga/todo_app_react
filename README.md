@@ -24,6 +24,8 @@ Todo App
 
 A very small Todo app built entirely with **React 19.0.0** and powered by **Zustand** state manager v5.0.3. App created for learning purposes.
 
+You can also check out the app on https://piotrotta.github.io/todo_app_react/
+
 <p align="center">
 <img src="readmeAssets/readme_photo.png" alt="Todo App showcase" title="Todo App showcase" width="400" />
 </p>
