@@ -1,6 +1,10 @@
-<h1 align="center">
-Todo App
-</h1>
+<div id="user-content-toc">
+  <ul align="center" style="list-style: none;">
+    <summary>
+      <h1>Todo App</h1>
+    </summary>
+  </ul>
+</div>
 
 <p align="center">
    <img src="readmeAssets/TodoApp_softwareBox.png" alt="Todo App software box picture" title="Todo App by Piotr Otta" height="320" />
